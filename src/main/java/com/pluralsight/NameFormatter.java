@@ -49,6 +49,29 @@ public class NameFormatter {
             suffix = token[1].trim();
         }
 
+        String[] nameTokens = namePart.split(" ");
+        String lastName = nameTokens[nameTokens.length - 1];
+
+        String prefix = "";
+
+        int firstNameIndex = 0;
+
+        if (nameTokens[0].equalsIgnoreCase("Dr.")) {
+            prefix = nameTokens[0];
+
+            firstNameIndex = 1;
+        }
+
+        String firstName = nameTokens[firstNameIndex];
+        String middleName = "";
+
+        if (firstNameIndex + 1 < nameTokens.length - 1) {
+            middleName = nameTokens[firstNameIndex + 1];
+
+        }
+
+
+
 
 
     }
